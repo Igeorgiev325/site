@@ -10,7 +10,7 @@
 
 <style>
 .container {
-    background-color: darkslateblue;
+    background-color: #41b883;
     padding: 2rem;
 }
 
@@ -28,6 +28,6 @@ a {
 }
 
 .router-link-exact-active {
-    color: white;
+    border: 3px solid white;
 }
 </style>
