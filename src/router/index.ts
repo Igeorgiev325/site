@@ -21,6 +21,11 @@ const router = createRouter({
       path: '/district',
       name: 'district',
       component: () => import('../views/DistrictView.vue')
+    },
+    {
+      path: '/counter',
+      name: 'counter',
+      component: () => import('../views/CounterView.vue')
     }
   ]
 })
