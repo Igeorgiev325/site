@@ -9,7 +9,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 .container {
     background-color: #41b883;
     padding: 2rem;
