@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { useCounterStore } from '@/stores/counter'
 
 const store = useCounterStore()
@@ -29,5 +29,17 @@ const store = useCounterStore()
     font-size: 3rem;
     width: 50%;
     margin: auto;
+}
+button {
+    border: 0.3rem solid #41b883;
+    border-radius: 3rem;
+    padding: 1rem;
+    color:#41b883
+}
+.red {
+    color: red;
+}
+.blue {
+    color: blue;
 }
 </style>

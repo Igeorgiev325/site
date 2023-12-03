@@ -26,6 +26,11 @@ const router = createRouter({
       path: '/counter',
       name: 'counter',
       component: () => import('../views/CounterView.vue')
+    },
+    {
+      path: '/pics',
+      name: 'pics',
+      component: () => import('../views/PicturesView.vue')
     }
   ]
 })

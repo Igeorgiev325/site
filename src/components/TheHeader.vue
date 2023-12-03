@@ -1,10 +1,11 @@
 <template>
     <div class="container">
-        <nav>
+        <nav class="links">
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/about">About</RouterLink>
             <RouterLink to="/district">District</RouterLink>
             <RouterLink to="/counter">Counter</RouterLink>
+            <RouterLink to="/pics">Pics</RouterLink>
         </nav>
     </div>
 </template>
@@ -12,23 +13,21 @@
 <style scoped>
 .container {
     background-color: #41b883;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 nav {
     display: flex;
     justify-content: space-around;
-    width: 40rem;
+    width: 20rem;
 }
 
 a {
     text-decoration: none;
     color: black;
-    border: 3px solid black;
-    padding: 1rem 2rem;
 }
 
 .router-link-exact-active {
-    border: 3px solid white;
+    color: white;
 }
 </style>

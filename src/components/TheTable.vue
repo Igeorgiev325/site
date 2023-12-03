@@ -3,8 +3,8 @@ import dist from '@/data/district.json'
 </script>
 
 <template>
-  <v-table>
-    <thead>
+  <v-table class="table">
+    <!-- <thead>
       <tr>
         <th class="text-left">
           Name
@@ -13,15 +13,21 @@ import dist from '@/data/district.json'
           District
         </th>
       </tr>
-    </thead>
+    </thead> -->
     <tbody>
       <tr
         v-for="item in dist"
         :key="item.name"
         >
         <td>{{ item.name }}</td>
-        <td>{{ item.item }}</td>
+        <td>{{ item.item?.join(', ') }}</td>
       </tr>
     </tbody>
   </v-table>
 </template>
+
+<style scoped>
+.table {
+  background-color: rgb(123, 83, 83);
+}
+</style>
