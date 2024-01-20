@@ -28,9 +28,9 @@ const router = createRouter({
       component: () => import('../views/CounterView.vue')
     },
     {
-      path: '/pics',
-      name: 'pics',
-      component: () => import('../views/PicturesView.vue')
+      path: '/review',
+      name: 'review',
+      component: () => import('../views/ReviewView.vue')
     }
   ]
 })

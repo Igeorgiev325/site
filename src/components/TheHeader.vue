@@ -5,7 +5,7 @@
             <RouterLink to="/about">About</RouterLink>
             <RouterLink to="/district">District</RouterLink>
             <RouterLink to="/counter">Counter</RouterLink>
-            <RouterLink to="/pics">Pics</RouterLink>
+            <RouterLink to="/review">Review</RouterLink>
         </nav>
     </div>
 </template>
