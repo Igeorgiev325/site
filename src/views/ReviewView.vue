@@ -2,26 +2,33 @@
     <div class="container">
         <div class="inner_container">
             <input class="input_field" type="text" v-model="inputText">
-            <button class="button" @click="sendText">Submit</button>
-            <button class="button" @click="del"><h2>X</h2></button>
+            <TheButton class="button" @click="sendText">Submit</TheButton>
         </div>
+        <div class="result_field">
             <p class="text_field" v-show="someText">{{ someText }}</p>
+            <TheButton class="the_button" @click="del">
+                <h2>X</h2>
+            </TheButton>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import TheButton from '../components/TheButton.vue'
 
-let someText = ref([])
-let inputText = ref('')
+let someText = ref<string[]>([])
+let inputText = ref()
 let transfer = ref('hello')
 
  defineProps({
     transfer: String
  })
 
-const sendText = () => someText.value.push(inputText.value)
-const del = () => someText.value = []
+const sendText = () => {
+    inputText.value ? someText.value.push(inputText.value) : ''
+}
+const del = () => someText.value.pop()
 </script>
 
 <style scoped>
@@ -34,12 +41,6 @@ const del = () => someText.value = []
     display: flex;
     flex-direction: row;
 }
-.button {
-    background-color:blueviolet;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    border-radius: 1rem;
-}
 .input_field {
     background-color:whitesmoke;
     margin: 1rem;
@@ -49,6 +50,13 @@ const del = () => someText.value = []
     color:black;
     width: fit-content;
     margin: 1rem;
+}
+.result_field {
+    display:flex;
+    flex-direction:column;
+}
+.the_button {
+    width:fit-content
 }
 
 </style>

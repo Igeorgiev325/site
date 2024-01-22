@@ -16,6 +16,6 @@ const testRegex = someText.match(regex)
 
 </script>
 
-<style>
+<style scoped>
 
 </style>
