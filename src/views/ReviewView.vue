@@ -2,10 +2,10 @@
     <div class="container">
         <div class="inner_container">
             <input class="input_field" type="text" v-model="inputText">
-            <TheButton class="button" @click="sendText">Submit</TheButton>
+            <TheButton class="button" @click="sendText" :title="'Submit'"></TheButton>
         </div>
         <div class="result_field">
-            <p class="text_field" v-show="someText">{{ someText }}</p>
+            <p class="text_field" v-show="showText">{{ someText }}</p>
             <TheButton class="the_button" @click="del">
                 <h2>X</h2>
             </TheButton>
@@ -14,19 +14,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import TheButton from '../components/TheButton.vue'
 
 let someText = ref<string[]>([])
 let inputText = ref()
-let transfer = ref('hello')
+let showText = ref<boolean>(true)
 
- defineProps({
-    transfer: String
- })
+watch(someText.value, (newSomeText) => {
+    console.log(newSomeText)
+})
 
 const sendText = () => {
     inputText.value ? someText.value.push(inputText.value) : ''
+    inputText.value = ''
 }
 const del = () => someText.value.pop()
 </script>
