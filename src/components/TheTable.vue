@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import dist from '@/data/district.json'
-</script>
-
 <template>
   <v-table class="table">
     <!-- <thead>
@@ -15,16 +11,17 @@ import dist from '@/data/district.json'
       </tr>
     </thead> -->
     <tbody>
-      <tr
-        v-for="item in dist"
-        :key="item.name"
-        >
+      <tr v-for="item in dist" :key="item.name">
         <td>{{ item.name }}</td>
         <td>{{ item.item?.join(', ') }}</td>
       </tr>
     </tbody>
   </v-table>
 </template>
+
+<script setup lang="ts">
+import dist from '@/data/district.json'
+</script>
 
 <style scoped>
 .table {
