@@ -6,7 +6,7 @@
     <div>{{ rest }}</div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 import { ref } from 'vue'
 import random from '../data/random.json'
 

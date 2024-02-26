@@ -5,7 +5,7 @@
         <div>{{ hour }}</div>
     </div>
 </template>
-<script setup lang="ts">
+<script lang="ts">
 defineProps({
     title: {
         type: String,

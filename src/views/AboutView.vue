@@ -12,7 +12,7 @@
     <div class="fourth">H</div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 import { ref } from 'vue'
 
 const text = ref('This is an about page')

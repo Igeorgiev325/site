@@ -8,7 +8,7 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 import { ref, watch } from 'vue'
 import { useCounterStore } from '@/stores/counter'
 

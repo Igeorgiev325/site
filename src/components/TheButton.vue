@@ -1,7 +1,7 @@
 <template>
     <button class="button">{{ title }}</button>
 </template>
-<script setup lang="ts">
+<script lang="ts">
     defineProps({
         title: {
             type: String,
