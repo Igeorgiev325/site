@@ -1,13 +1,29 @@
 <template>
     <div>{{ numbers }}</div>
+    <div>{{ even }}</div>
+    <div>{{ arr }}</div>
+    <div>{{ masiv }}</div>
+    <div>{{ rest }}</div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 import random from '../data/random.json'
 
-const numbers = ref<number[]>([])
+const numbers = ref<number[] | string>()
+const even = ref<string>()
+let arr = ref<string[]>(['filter', 'sort', 'map', 'slice', 'splice', 'reduce'])
 
-numbers.value = random.filter((ran => ran > 500)).sort((a, b) => b - a)
+numbers.value = random.filter((ran => ran > 500)).sort((a, b) => b - a).join(', ')
+even.value = random.filter((val => val % 2 === 0)).sort((a, b) => a - b).join(', ')
+
+const masiv = arr.value.map(varr => varr + "&").toString().replace(/,/g, " ")
+
+const iterator = ['filter', 'sort', 'map', 'slice', 'splice', 'reduce']
+
+const [first, second, , ...rest] = iterator
+console.log("first: ", first)
+console.log("second: ", second)
+console.log("rest: ", rest)
 
 </script>

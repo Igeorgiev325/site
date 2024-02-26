@@ -2,7 +2,7 @@
     <div class="container">
         <div class="inner_container">
             <input class="input_field" type="text" v-model="inputText">
-            <TheButton class="button" @click="sendText" :title="'Submit'"></TheButton>
+            <TheButton class="button" @click="sendText" title="Submit"></TheButton>
         </div>
         <div class="result_field">
             <p class="text_field" v-show="showText">{{ someText }}</p>
