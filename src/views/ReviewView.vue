@@ -17,19 +17,34 @@
 import { ref, watch } from 'vue'
 import TheButton from '../components/TheButton.vue'
 
-let someText = ref<string[]>([])
-let inputText = ref()
-let showText = ref<boolean>(true)
+export default {
+    components: {
+        TheButton
+    },
+    setup() {
 
-watch(someText.value, (newSomeText) => {
-    console.log(newSomeText)
-})
+        let someText = ref<string[]>([])
+        let inputText = ref()
+        let showText = ref<boolean>(true)
 
-const sendText = () => {
-    inputText.value ? someText.value.push(inputText.value) : ''
-    inputText.value = ''
+        watch(someText.value, (newSomeText) => {
+            console.log(newSomeText)
+        })
+
+        const sendText = () => {
+            inputText.value ? someText.value.push(inputText.value) : ''
+            inputText.value = ''
+        }
+        const del = () => someText.value.pop()
+        return {
+            inputText,
+            sendText,
+            showText,
+            someText,
+            del
+        }
+    }
 }
-const del = () => someText.value.pop()
 </script>
 
 <style scoped>

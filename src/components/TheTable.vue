@@ -19,8 +19,16 @@
   </v-table>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 import dist from '@/data/district.json'
+
+export default {
+  setup() {
+    return {
+      dist
+    }
+  }
+}
 </script>
 
 <style scoped>

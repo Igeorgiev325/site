@@ -15,11 +15,19 @@
 <script lang="ts">
 import { ref } from 'vue'
 
-const text = ref('This is an about page')
-const someText = 'This is an about page'
-const regex = /[is]+/
-
-const testRegex = someText.match(regex)
+export default {
+setup(){
+  const text = ref('This is an about page')
+  const someText = 'This is an about page'
+  const regex = /[is]+/
+  
+  const testRegex = someText.match(regex)
+  return {
+    text,
+    testRegex
+  }
+}
+}
 
 </script>
 

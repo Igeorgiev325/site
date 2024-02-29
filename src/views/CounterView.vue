@@ -12,7 +12,15 @@
 import { ref, watch } from 'vue'
 import { useCounterStore } from '@/stores/counter'
 
-const store = useCounterStore()
+export default {
+    setup() {
+        const store = useCounterStore()
+        return {
+            store
+        }
+    }
+
+}
 
 </script>
 

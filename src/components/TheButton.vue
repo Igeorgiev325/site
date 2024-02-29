@@ -1,13 +1,16 @@
 <template>
     <button class="button">{{ title }}</button>
 </template>
+
 <script lang="ts">
-    defineProps({
+export default {
+    props: {
         title: {
             type: String,
             default: "Button"
         }
-    })
+    }
+}
 </script>
 
 <style>

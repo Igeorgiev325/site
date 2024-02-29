@@ -1,8 +1,3 @@
-<script lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import TheHeader from '@/components/TheHeader.vue'
-</script>
-
 <template>
   <header>
     <TheHeader></TheHeader>
@@ -10,6 +5,18 @@ import TheHeader from '@/components/TheHeader.vue'
 
   <RouterView />
 </template>
+
+<script lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+import TheHeader from '@/components/TheHeader.vue'
+
+export default {
+  components: {
+    TheHeader
+  }
+}
+</script>
+
 
 <style scoped>
 

@@ -1,12 +1,3 @@
-<script lang="ts">
-const props = defineProps({
-    title:String,
-    text:String
-})
-
-
-</script>
-
 <template>
     <v-expansion-panels variant="accordion">
         <v-expansion-panel
@@ -15,4 +6,21 @@ const props = defineProps({
         ></v-expansion-panel>
     </v-expansion-panels>
 </template>
+
+<script lang="ts">
+export default {
+    props: {
+        title: {
+            type: String,
+            required: false
+        },
+        text: {
+            type: String,
+            required: false
+        }
+
+    }
+}
+</script>
+
 
