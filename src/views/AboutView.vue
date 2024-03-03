@@ -1,44 +1,40 @@
 <template>
-  <div class="about">
-    <h1>{{ text }}</h1>
-    <p>{{ testRegex }}</p>
-  </div>
-
-    <div class="first">Hiii
-      <div class="second">Hii
-        <div class="third">Hi</div>
-      </div>
-    </div>
-    <div class="fourth">H</div>
+<div>
+  {{ getProfile() }}
+</div>
 </template>
 
 <script lang="ts">
+import { useLocation } from '@/composables/useLocation'
 import { ref } from 'vue'
 
 export default {
-setup(){
-  const text = ref('This is an about page')
-  const someText = 'This is an about page'
-  const regex = /[is]+/
-  
-  const testRegex = someText.match(regex)
-  return {
-    text,
-    testRegex
+  setup() {
+
+    const halle = ref<string>("C3")
+    const booth = ref<string>("88")
+    const { getLocation } = useLocation(halle.value, booth.value)
+
+    console.log("About", getLocation())
+
+    const name = ref("Proful")
+
+    const getProfile = () => name.value
+    
+    const setProfile = (newName: string) => {
+      name.value = newName
+    }
+   
+    setProfile("New")
+    
+    return {
+      getProfile,
+      setProfile
+    }
   }
 }
-}
-
 </script>
 
 <style scoped>
-  .first {
-    color:red;
-    border: 1rem solid blue;
-    width: 20%;
-    background-color:bisque;
-  }
-  .second {
-    color: green;
-  }
+
 </style>

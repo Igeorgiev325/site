@@ -1,22 +1,26 @@
 <template>
     <div>
-        <ChildView :number="number"></ChildView>
+        <TheChild :number="number" @add-number="addToArray()"></TheChild>
     </div>
 </template>
 
 <script lang="ts">
 import { ref } from 'vue'
-import ChildView from './ChildView.vue'
+import TheChild from '@/components/TheChild.vue'
 
 export default {
     components: {
-        ChildView
+        TheChild
     },
     setup() {
-        const number = ref<number>(8)
+        const number = ref<number>(1)
+        const secondNumber = ref<number>(1)
 
+        const addToArray = () => number.value++
         return {
-            number
+            number,
+            secondNumber,
+            addToArray
         }
     }
 }
