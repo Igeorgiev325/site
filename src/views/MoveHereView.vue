@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
 import random from '../data/random.json'
 
 export default {

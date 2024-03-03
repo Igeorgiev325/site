@@ -38,11 +38,6 @@ const router = createRouter({
       component: () => import('../views/MoveHereView.vue')
     },
     {
-      path: '/child',
-      name: 'child',
-      component: () => import('../views/ChildView.vue')
-    },
-    {
       path: '/parent',
       name: 'parent',
       component: () => import('../views/ParentView.vue')

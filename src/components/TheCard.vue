@@ -1,8 +1,8 @@
 <template>
     <div class="container">
-        <div>{{ img }}</div>
+        <div>{{ cover }}</div>
         <div>{{ title }}</div>
-        <div>{{ hour }}</div>
+        <div>{{ description }}</div>
     </div>
 </template>
 
@@ -11,17 +11,22 @@ export default {
     props: {
         title: {
             type: String,
-            required: false,
+            required: true,
             default: "Title"
         },
-        hour: {
+        description: {
             type: Object,
-            required: true,
+            required: false,
             default: new Date
         },
-        img: {
+        cover: {
             type: String || undefined,
+            required: false,
             default: "IMG Placeholder"
+        },
+        pages: {
+            type: Number,
+            required: false
         }
     }
 }

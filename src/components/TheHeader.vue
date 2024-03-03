@@ -7,7 +7,6 @@
             <RouterLink to="/counter">Counter</RouterLink>
             <RouterLink to="/review">Review</RouterLink>
             <RouterLink to="/moveHere">Move Here</RouterLink>
-            <RouterLink to="/child">Child</RouterLink>
             <RouterLink to="/parent">Parent</RouterLink>
         </nav>
     </div>
