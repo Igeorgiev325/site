@@ -11,8 +11,8 @@ import { ref } from 'vue'
 export default {
   setup() {
 
-    const halle = ref<string>("C3")
-    const booth = ref<string>("88")
+    const halle = ref<string>("D3")
+    const booth = ref<string>("77")
     const { getLocation } = useLocation(halle.value, booth.value)
 
     console.log("About", getLocation())
