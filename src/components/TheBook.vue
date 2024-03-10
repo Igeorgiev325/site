@@ -1,23 +1,20 @@
 <template>
     <div class="container">
         <h2>{{ title }}</h2>
-        <img :src="cover">
+        <div>{{ cover }}</div>
         <div>{{ description }}</div>
         <div>{{ date }}</div>
-        <div>{{ pages }}</div>
+        <div>Pages: {{ pages }}</div>
     </div>
 </template>
 
 <script lang="ts">
 
-let defaultImg 
-
 export default {
     props: {
         title: {
             type: String,
-            required: false,
-            default: "Title"
+            required: true,
         },
         cover: {
             type: String || undefined,
@@ -36,8 +33,20 @@ export default {
         },
         pages: {
             type: Number,
-            required: false
+            required: false,
+            default: "???"
         }
     }
 }
 </script>
+
+<style scoped>
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 0.3rem solid red;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+</style>
