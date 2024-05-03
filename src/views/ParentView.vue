@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TheChild :number="number" @add-number="addToArray()"></TheChild>
+        <TheChild :number="number" @add-number="addToArray"></TheChild>
     </div>
 </template>
 
@@ -13,13 +13,12 @@ export default {
         TheChild
     },
     setup() {
-        const number = ref<number>(1)
-        const secondNumber = ref<number>(1)
+        const number = ref<number>(0)
 
-        const addToArray = () => number.value++
+        const addToArray = (n: number) => number.value += n
+
         return {
             number,
-            secondNumber,
             addToArray
         }
     }

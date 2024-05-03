@@ -9,6 +9,7 @@
             <RouterLink to="/moveHere">Move Here</RouterLink>
             <RouterLink to="/parent">Parent</RouterLink>
             <RouterLink to="/book">Book</RouterLink>
+            <RouterLink to="/promises">Promises</RouterLink>
         </nav>
     </div>
 </template>

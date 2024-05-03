@@ -2,11 +2,15 @@
 <div>
   {{ getProfile() }}
 </div>
+<div>
+  {{ human }}
+</div>
 </template>
 
 <script lang="ts">
 import { useLocation } from '@/composables/useLocation'
 import { ref } from 'vue'
+import type Person from '@/types/Person'
 
 export default {
   setup() {
@@ -26,10 +30,16 @@ export default {
     }
    
     setProfile("New")
+
+    const human = ref<Person>({
+      name: 'John',
+      age: 20
+    })
     
     return {
       getProfile,
-      setProfile
+      setProfile,
+      human
     }
   }
 }
@@ -37,4 +47,4 @@ export default {
 
 <style scoped>
 
-</style>
+</style>@/interface/Person@/types/Person

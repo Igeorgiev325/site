@@ -34,7 +34,7 @@ export default {
         pages: {
             type: Number,
             required: false,
-            default: "???"
+            default: 0
         }
     }
 }

@@ -1,10 +1,10 @@
 <template>
     <h2>{{ number }}</h2>
-    <TheButton @click="$emit('addNumber')"></TheButton>
+    <TheButton @click="$emit('addNumber', 8)"></TheButton>
 </template>
 
 <script lang="ts">
-import { watch } from 'vue'
+import { ref, watch } from 'vue'
 import TheButton from './TheButton.vue';
 
 export default {
@@ -15,11 +15,12 @@ export default {
         number: {
             type: Number,
             required: false
-        }
+        },
     },
-    emits: ["addNumber"],
+    emits: ['addNumber'],
     setup(props, { emit }) {
-        // emit('addNumber')
+
+        // emit('addNumber', 2)
         console.log("Props initial: ", props.number)
         watch(props, (newNumber) => {
             console.log("Props updated: ", newNumber.number)
