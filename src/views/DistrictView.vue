@@ -1,15 +1,15 @@
 <template>
-   <TheTable></TheTable>
+  <TheTable></TheTable>
 </template>
 
 <script lang="ts">
 import TheTable from '@/components/TheTable.vue'
 
 export default {
-   components: {
-      TheTable
-   },
-   setup() {
-   }
+  components: {
+    TheTable
+  },
+  setup() {
+  }
 }
 </script>

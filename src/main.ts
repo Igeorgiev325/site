@@ -14,9 +14,9 @@ import * as directives from 'vuetify/directives'
 
 const app = createApp(App)
 const vuetify = createVuetify({
-    components,
-    directives,
-  })
+  components,
+  directives,
+})
 
 app.use(createPinia())
 app.use(router)

@@ -24,6 +24,7 @@ import dist from '@/data/district.json'
 
 export default {
   setup() {
+    
     return {
       dist
     }

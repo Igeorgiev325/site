@@ -1,10 +1,10 @@
 <template>
-<div>
-  {{ getProfile() }}
-</div>
-<div>
-  {{ human }}
-</div>
+  <div>
+    {{ getProfile() }}
+  </div>
+  <div>
+    {{ human }}
+  </div>
 </template>
 
 <script lang="ts">
@@ -14,7 +14,6 @@ import type Person from '@/types/Person'
 
 export default {
   setup() {
-
     const halle = ref<string>("D3")
     const booth = ref<string>("77")
     const { getLocation } = useLocation(halle.value, booth.value)
@@ -47,4 +46,4 @@ export default {
 
 <style scoped>
 
-</style>@/interface/Person@/types/Person
+</style>

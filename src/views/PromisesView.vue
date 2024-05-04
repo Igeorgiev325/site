@@ -15,9 +15,9 @@ export default {
       console.log("Third")
     }
 
-    First()
-    Second()
-    Third()
+    setTimeout(() => First(), 3000)
+    setTimeout(() => Second(), 2000)
+    setTimeout(() => Third(), 1000)
 
     return {
         
