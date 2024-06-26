@@ -28,30 +28,10 @@ const router = createRouter({
       component: () => import('../views/CounterView.vue')
     },
     {
-      path: '/review',
-      name: 'review',
-      component: () => import('../views/ReviewView.vue')
-    },
-    {
       path: '/moveHere',
       name: 'moveHere',
       component: () => import('../views/MoveHereView.vue')
     },
-    {
-      path: '/parent',
-      name: 'parent',
-      component: () => import('../views/ParentView.vue')
-    },
-    {
-      path: '/book',
-      name: 'book',
-      component: () => import('../views/BookView.vue')
-    },
-    {
-      path: '/promises',
-      name: 'promises',
-      component: () => import('../views/PromisesView.vue')
-    }
   ]
 })
 
