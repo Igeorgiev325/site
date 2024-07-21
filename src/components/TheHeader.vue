@@ -6,6 +6,7 @@
       <RouterLink to="/district">District</RouterLink>
       <RouterLink to="/counter">Counter</RouterLink>
       <RouterLink to="/moveHere">Move Here</RouterLink>
+      <RouterLink to="/ToDo">To Do</RouterLink>
     </nav>
   </div>
 </template>

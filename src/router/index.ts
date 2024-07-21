@@ -32,6 +32,11 @@ const router = createRouter({
       name: 'moveHere',
       component: () => import('../views/MoveHereView.vue')
     },
+    {
+      path: '/ToDo',
+      name: 'ToDo',
+      component: () => import('../views/ToDoView.vue')
+    }
   ]
 })
 
